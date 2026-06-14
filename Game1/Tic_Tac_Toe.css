@@ -1,0 +1,98 @@
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #548687;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Layout Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* The 3x3 Grid Matrix */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 340px;
+    height: 340px;
+}
+
+/* Individual Tic Tac Toe Boxes */
+.Box {
+    background-color: #ffffc7;
+    border: none;
+    border-radius: 12px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #b0413e;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, background-color 0.2s;
+}
+
+.Box:hover {
+    background-color: #fffa9e;
+}
+
+.Box:active {
+    transform: scale(0.95);
+}
+
+/* Action Buttons (Reset & New Game) */
+#reset, #new-btn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #191919;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+#reset:hover, #new-btn:hover {
+    background-color: #333;
+}
+
+/* Msg Container (Hidden by default using 'hide' class) */
+.msg-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Utility class to toggle visibility via JavaScript */
+.hide {
+    display: none;
+}
